@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#07080d" />
+  <meta name="description" content="BrandGate Agency - Best Digital Marketing and Lead Generation Agency in Dubai, UAE." />
+  <title>BrandGate | أفضل وكالة تسويق رقمي وصناعة براندات في دبي</title>
+
+  <!-- مسار أو رابط صورة الفافيكون -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- الخطوط الرسمية -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- إضاءة محيطية تفاعلية تتبع الماوس -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- 1. الهيدر وشريط التنقل الثابت -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      
+      <a href="#hero" class="brand-logo" aria-label="BrandGate">
+        <span class="logo-mark">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M4 6C4 4.89543 4.89543 4 6 4H18C23.5228 4 28 8.47715 28 14C28 19.5228 23.5228 24 18 24H10V28H4V6Z" fill="url(#bgGrad)" />
+            <path d="M10 10H17C19.2091 10 21 11.7909 21 14C21 16.2091 19.2091 18 17 18H10V10Z" fill="#07080d" />
+            <defs>
+              <linearGradient id="bgGrad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF3366" />
+                <stop offset="0.5" stop-color="#7928CA" />
+                <stop offset="1" stop-color="#00DFD8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">Brand<span class="gradient-text">Gate</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active" data-i18n="nav.home">الرئيسية</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">من نحن</a></li>
+          <li><a href="#strengths" class="nav-link" data-i18n="nav.strengths">نقاط قوتنا</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav.services">الخدمات</a></li>
+          <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">الأعمال</a></li>
+          <li><a href="#performance" class="nav-link" data-i18n="nav.performance">الأداء والتقنية</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button type="button" class="btn-ctrl" id="langToggle" aria-label="Toggle language">
+          <span id="langLabel">EN</span>
+        </button>
+
+        <button type="button" class="btn-ctrl" id="themeToggle" aria-label="Toggle theme">
+          <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. الواجهة الرئيسية (Hero Section) -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-indicator"></span>
+            <span data-i18n="hero.tag">الوكالة الأولى الرائدة في التسويق والنمو الرقمي في الإمارات</span>
+          </div>
+
+          <h1 class="hero-title" data-i18n="hero.title">
+            بناء علامات تجارية جريئة تأسر الأنظار وتوقف التمرير
+          </h1>
+
+          <p class="hero-slogan" data-i18n="hero.subtitle">
+            استراتيجيات | مقاطع ريلز | إعلانات ممولة | بناء الهوية | إدارة التواصل
+          </p>
+
+          <p class="hero-desc" data-i18n="hero.desc">
+            براند جيت: مرحباً بك في عصر الريادة الرقمية. ندمج التحليلات المتقدمة مع الإنتاج السينمائي لنبني لعلامتك التجارية حضوراً استثنائياً في دبي والخليج يحول الجمهور إلى عملاء دائمين.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/971502676684?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%D8%8C%20%D8%AA%D8%AD%D9%8A%D8%A9%20%D8%B7%D9%8A%D8%A8%D8%A9%20%D9%84%D9%81%D8%B1%D9%8A%D9%82%20%D8%A8%D8%B1%D8%A7%D9%86%D8%AF%20%D8%AC%D9%8A%D8%AA%D8%8C%20%D9%86%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%88%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%81%D8%B1%D8%B5%20%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%88%D9%86%20%D9%84%D8%AA%D8%B7%D9%88%D9%8A%D8%B1%20%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84." 
+               target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow" id="heroCta">
+              <span data-i18n="hero.cta">راسلنا لتنمية علامتك التجارية</span>
+              <span class="btn-arrow">&larr;</span>
+            </a>
+            <a href="#portfolio" class="btn btn-glass" data-i18n="hero.explore">استكشف أعمالنا</a>
+          </div>
+        </div>
+
+        <!-- فيديو الهيرو الرئيسي -->
+        <div class="hero-media-wrap">
+          <div class="glass-card media-glass-frame tilt-box">
+            <div class="video-container">
+              <video class="hero-video" poster="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80" autoplay muted loop playsinline>
+                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4" />
+              </video>
+              <div class="video-glass-overlay">
+                <span class="live-tag"><span class="dot"></span> <span data-i18n="hero.liveTag">إبداع دبي ٢٠٢٦</span></span>
+                <h4 data-i18n="hero.videoTitle">علامتك التجارية، لوحتنا الإبداعية</h4>
+                <p data-i18n="hero.videoSub">معادلة نجاح المشاريع الرائدة في دولة الإمارات</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- شريط العملاء اللانهائي المترجم -->
+    <div class="marquee-wrapper" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+
+    <!-- 3. من نحن وفلسفة العمل -->
+    <section class="section-padding" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="about.tag">من نحن وفلسفة العمل</span>
+          <h2 class="quote-heading" data-i18n="about.quote">
+            "لبناء علامة تجارية قوية، تكفيك فكرة ملهمة. نحن نقدم لك الاختلاف، من أجلك وحدك. قصة لا تشبه غيرها."
+          </h2>
+          <p class="about-lead-text" data-i18n="about.lead">
+            معادلة المشاريع الرائدة في الإمارات: مرحباً بكم في براند جيت، وكالة التسويق المتطورة في دبي. نجمع بين التفكير الإبداعي والخبرة الاستراتيجية والفهم العميق للأسواق لتمكين عملائنا من التفوق والنمو في بيئة تنافسية لا ترحم.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="glass-card pillar-card tilt-box">
+            <span class="pillar-number">٠١</span>
+            <h3 class="pillar-title" data-i18n="about.p1.title">طرق غير تقليدية</h3>
+            <p class="pillar-desc" data-i18n="about.p1.desc">
+              تحويل الأفكار الاستثنائية إلى واقع حي لصناعة سرد فريد للعلامة التجارية يختلف كلياً عن السائد ويترك بصمة خالدة في الذاكرة.
+            </p>
+            <div class="pillar-footer">
+              <span class="tag-pill" data-i18n="about.p1.tag">ابتكار بلا حدود</span>
+            </div>
+          </div>
+
+          <div class="glass-card pillar-card tilt-box">
+            <span class="pillar-number">٠٢</span>
+            <h3 class="pillar-title" data-i18n="about.p2.title">نهج فريد ومخصص</h3>
+            <p class="pillar-desc" data-i18n="about.p2.desc">
+              ابتكار أسلوب مخصص يلبي تطلعاتك بدقة ويقدم حلولاً متكاملة لتأسيس علامة تجارية تعيش وتكبر باستمرار عبر الزمن.
+            </p>
+            <div class="pillar-footer">
+              <span class="tag-pill" data-i18n="about.p2.tag">حلول مخصصة لكل علامة</span>
+            </div>
+          </div>
+
+          <div class="glass-card pillar-card tilt-box">
+            <span class="pillar-number">٠٣</span>
+            <h3 class="pillar-title" data-i18n="about.p3.title">تنفيذ متقن ودقيق</h3>
+            <p class="pillar-desc" data-i18n="about.p3.desc">
+              بتكاتف فريقنا الإبداعي، نصل إلى أعلى درجات الإتقان مع استثمار كل ثانية بدقة دون أي إهدار للوقت أو الميزانيات.
+            </p>
+            <div class="pillar-footer">
+              <span class="tag-pill" data-i18n="about.p3.tag">دقة وسرعة قصوى</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card team-banner-card mt-xl">
+          <div class="team-banner-content">
+            <span class="section-tag" data-i18n="about.teamBadge">فريق الإبداع في دبي</span>
+            <h3 class="team-banner-title" data-i18n="about.teamTitle">حيث تلتقي الرؤية الجريئة مع التنفيذ الاحترافي</h3>
+            <p class="team-banner-desc" data-i18n="about.teamDesc">
+              فريقنا متعدد الخبرات من استراتيجيين، مخرجين سينمائيين، وخبراء نمو إعلاني يعيدون رسم ملامح التسويق الرقمي من قلب الإمارات لخدمة الأسواق الخليجية والعالمية.
+            </p>
+          </div>
+          <div class="team-banner-media">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="BrandGate Dubai Team" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. نقاط قوتنا (Our Strengths) -->
+    <section class="section-padding bg-alt" id="strengths">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="strengths.tag">نقاط قوتنا</span>
+          <h2 class="section-title"><span data-i18n="strengths.title">ما الذي يميز براند جيت ويجعلها فريدة؟</span></h2>
+          <p class="section-subtitle" data-i18n="strengths.subtitle">الركائز الأساسية الثلاث التي تدير محرك نجاحنا ونجاح عملائنا في كل خطوة.</p>
+        </div>
+
+        <div class="strengths-grid">
+          <div class="glass-card strength-card tilt-box">
+            <div class="strength-icon-box">💡</div>
+            <h3 class="strength-title" data-i18n="strengths.s1.title">نقدر قيمة الأفكار</h3>
+            <p class="strength-desc" data-i18n="strengths.s1.desc">
+              نتبنى ثقافة الإبداع ونشجع التفكير الابتكاري والتمكين والتعاون المثمر، لنحول الأفكار الجريئة إلى حلول استثنائية تصنع فارقاً حقيقياً لعملائنا.
+            </p>
+          </div>
+
+          <div class="glass-card strength-card tilt-box">
+            <div class="strength-icon-box">⚡</div>
+            <h3 class="strength-title" data-i18n="strengths.s2.title">لا حدود لطموحنا</h3>
+            <p class="strength-desc" data-i18n="strengths.s2.desc">
+              بعقلية متحررة ونهج شجاع لا يخشى التحديات، نكسر القوالب المعتادة ونعيد تعريف ما يمكن تحقيقه لتحقيق نجاحات كاسحة تتجاوز كل التوقعات.
+            </p>
+          </div>
+
+          <div class="glass-card strength-card tilt-box">
+            <div class="strength-icon-box">♾️</div>
+            <h3 class="strength-title" data-i18n="strengths.s3.title">تطور مستمر بلا توقف</h3>
+            <p class="strength-desc" data-i18n="strengths.s3.desc">
+              في صدارة الابتكار الرقمي، نتحدى النمطية ونتطور باستمرار لنعيد رسم معايير التميز في كل مرحلة من مراحل النمو.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. الخدمات الثمانية الشاملة (Services) -->
+    <section class="section-padding" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="services.tag">الخدمات والخبرات</span>
+          <h2 class="section-title" data-i18n="services.title">حلول متكاملة لهيمنة علامتك التجارية</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">منظومة تسويقية متكاملة تغطي كل زاوية من زوايا النمو والانتشار والمبيعات.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <span class="service-idx">٠١</span>
+              <div class="service-icon">🧭</div>
+            </div>
+            <h3 class="service-title" data-i18n="services.s1.title">استراتيجيات العلامات التجارية الرقمية</h3>
+            <p class="service-desc" data-i18n="services.s1.desc">تحديد التموضع التنافسي وصياغة صوت العلامة ورسم خرائط طريق دقيقة لاختراق الأسواق وتصدر مجالك.</p>
+            <div class="service-tags">
+              <span data-i18n="services.s1.t1">تحديد التموضع</span>
+              <span data-i18n="services.s1.t2">خطط النمو</span>
+            </div>
+          </div>
+
+          <div class="glass-card service-card highlight-glow">
+            <div class="service-top">
+              <span class="service-idx">٠٢</span>
+              <div class="service-icon">🎬</div>
+            </div>
+            <h3 class="service-title" data-i18n="services.s2.title">صناعة الفيديوهات ومقاطع الريلز</h3>
+            <p class="service-desc" data-i18n="services.s2.desc">إنتاج محتوى فيديو قصير يخطف الانتباه في أول ثانيتين، مع إخراج سينمائي مواكب لخوارزميات المنصات.</p>
+            <div class="service-tags">
+              <span data-i18n="services.s2.t1">خطافات جذابة</span>
+              <span data-i18n="services.s2.t2">تصوير سينمائي</span>
+            </div>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <span class="service-idx">٠٣</span>
+              <div class="service-icon">📈</div>
+            </div>
+            <h3 class="service-title" data-i18n="services.s3.title">الإعلانات الممولة وجذب المبيعات</h3>
+            <p class="service-desc" data-i18n="services.s3.desc">حملات إعلانية مدفوعة بالبيانات والأرقام لتحقيق أعلى عائد على الإنفاق الإعلاني ومضاعفة الأرباح.</p>
+            <div class="service-tags">
+              <span data-i18n="services.s3.t1">عائد استثماري مضاعف</span>
+              <span data-i18n="services.s3.t2">عملاء محتملون</span>
+            </div>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <span class="service-idx">٠٤</span>
+              <div class="service-icon">✨</div>
+            </div>
+            <h3 class="service-title" data-i18n="services.s4.title">تصميم وتطوير الهوية البصرية</h3>
+            <p class="service-desc" data-i18n="services.s4.desc">ابتكار هويات بصرية فاخرة تشمل الشعار ونظام الألوان ودليل الهوية الكامل الذي يعكس هيبة العلامة وقوتها.</p>
+            <div class="service-tags">
+              <span data-i18n="services.s4.t1">هوية بصرية</span>
+              <span data-i18n="services.s4.t2">دليل الهوية</span>
+            </div>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <span class="service-idx">٠٥</span>
+              <div class="service-icon">📱</div>
+            </div>
+            <h3 class="service-title" data-i18n="services.s5.title">إدارة وسائل التواصل الاجتماعي</h3>
+            <p class="service-desc" data-i18n="services.s5.desc">إشراف يومي على صناعة وجدولة المحتوى، التفاعل الاحترافي مع المتابعين، وبناء مجتمع مخلص لعلامتك.</p>
+            <div class="service-tags">
+              <span data-i18n="services.s5.t1">إدارة المجتمعات</span>
+              <span data-i18n="services.s5.t2">خطة نشر شهرية</span>
+            </div>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <span class="service-idx">٠٦</span>
+              <div class="service-icon">🎯</div>
+            </div>
+            <h3 class="service-title" data-i18n="services.s6.title">التسويق عبر محركات البحث</h3>
+            <p class="service-desc" data-i18n="services.s6.desc">استهداف نية الشراء المباشرة عبر إعلانات محركات البحث لجذب عملاء يبحثون عن خدماتك ومستعدين للتعاقد فوراً.</p>
+            <div class="service-tags">
+              <span data-i18n="services.s6.t1">إعلانات البحث</span>
+              <span data-i18n="services.s6.t2">استهداف مباشر</span>
+            </div>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <span class="service-idx">٠٧</span>
+              <div class="service-icon">🚀</div>
+            </div>
+            <h3 class="service-title" data-i18n="services.s7.title">تحسين محركات البحث</h3>
+            <p class="service-desc" data-i18n="services.s7.desc">تصدر النتائج المجانية الأولى في محركات البحث لبناء حركة زيارات مستمرة ذات جودة عالية بدون تكلفة لكل نقرة.</p>
+            <div class="service-tags">
+              <span data-i18n="services.s7.t1">المرتبة الأولى</span>
+              <span data-i18n="services.s7.t2">زيارات مجانية</span>
+            </div>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <span class="service-idx">٠٨</span>
+              <div class="service-icon">💻</div>
+            </div>
+            <h3 class="service-title" data-i18n="services.s8.title">كتابة النصوص الإعلانية وتطوير المنصات</h3>
+            <p class="service-desc" data-i18n="services.s8.desc">صياغة نصوص بيعية تأسر المشاعر وتحفز اتخاذ القرار، مع بناء مواقع سريعة فائقة الأداء تحول الزوار إلى عملاء.</p>
+            <div class="service-tags">
+              <span data-i18n="services.s8.t1">سرد قصصي مؤثر</span>
+              <span data-i18n="services.s8.t2">برمجة متطورة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. اقتباس Don Draper السينمائي -->
+    <section class="quote-cinema-section">
+      <div class="container text-center">
+        <div class="quote-symbol">“</div>
+        <blockquote class="cinematic-quote-text" data-i18n="cinema.quote">
+          "أنت هو المنتج نفسه. عندما تجعلهم يشعرون بشيء ما، فهذا هو ما يبيع حقاً."
+        </blockquote>
+        <cite class="quote-author" data-i18n="cinema.author">– دون دريبر</cite>
+        <p class="quote-sub-message" data-i18n="cinema.sub">
+          الخيار المفضل لكبرى الشركات العالمية والمؤسسات الناشئة الطموحة. ضاعف مبيعاتك وتفاعل جمهورك معنا بحلولنا المدعومة بالبيانات.
+        </p>
+        <a href="#contact" class="btn btn-primary btn-glow mt-md" data-i18n="cinema.btn">ابدأ مشروعك معنا الآن</a>
+      </div>
+    </section>
+
+    <!-- 7. سابقة الأعمال (Portfolio مع تشغيل فوري للفيديو عند الضغط) -->
+    <section class="section-padding" id="portfolio">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag" data-i18n="portfolio.tag">سابقة الأعمال والمحتوى المميز</span>
+          <h2 class="section-title" data-i18n="portfolio.title">أعمال صنعت فارقاً حقيقياً في السوق</h2>
+          <p class="section-subtitle" data-i18n="portfolio.subtitle">اضغط على أي عمل لتشغيل الفيديو فوراً في نافذة العرض السينمائية.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          
+          <!-- مشروع 1: ريلز "يوم طبيعي بشركتنا" (فيديو طولي Reel 9:16) -->
+          <article class="glass-card portfolio-card tilt-box" 
+                   data-video-format="vertical"
+                   data-video-src="/reel-normal-day.mp4" 
+                   data-video-title="مشروع محتوى: يوم طبيعي بشركتنا">
+            <div class="portfolio-media">
+              <video class="portfolio-media-item" poster="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" autoplay muted loop playsinline>
+                <source src="/reel-normal-day.mp4" type="video/mp4" />
+              </video>
+              
+              <button type="button" class="play-trigger-btn" aria-label="تشغيل الفيديو">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </button>
+
+              <div class="media-badge" data-i18n="portfolio.p1.badge">عرض ريلز</div>
+            </div>
+            <div class="portfolio-details">
+              <span class="portfolio-category" data-i18n="portfolio.p1.cat">إنتاج محتوى فيديو وسينما</span>
+              <h3 class="portfolio-name" data-i18n="portfolio.p1.title">مشروع محتوى: يوم طبيعي بشركتنا</h3>
+              <p class="portfolio-summary" data-i18n="portfolio.p1.desc">
+                سلسلة مقاطع عفوية كشفت كواليس بيئة العمل وأظهرت الجانب الإنساني للعلامة، وحققت انتشاراً واسعاً وملايين المشاهدات في وقت قياسي.
+              </p>
+              <button type="button" class="portfolio-action-link" data-i18n="portfolio.p1.link">
+                شاهد الفيديو الآن &larr;
+              </button>
+            </div>
+          </article>
+
+          <!-- مشروع 2: فيديو/حملة "عميل فاقد الأمل" (فيديو أفقي سينمائي) -->
+          <article class="glass-card portfolio-card tilt-box" 
+                   data-video-format="landscape"
+                   data-video-src="/BigBuckBunny.mp4"
+                   data-video-title="مشروع محتوى: عميل فاقد الأمل">
+            <div class="portfolio-media">
+              <video class="portfolio-media-item" poster="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" autoplay muted loop playsinline>
+                <source src="/BigBuckBunny.mp4" type="video/mp4" />
+              </video>
+
+              <button type="button" class="play-trigger-btn" aria-label="تشغيل الفيديو">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </button>
+
+              <div class="media-badge" data-i18n="portfolio.p2.badge">دراسة حالة</div>
+            </div>
+            <div class="portfolio-details">
+              <span class="portfolio-category" data-i18n="portfolio.p2.cat">حملات تحويل وسرد قصصي</span>
+              <h3 class="portfolio-name" data-i18n="portfolio.p2.title">مشروع محتوى: عميل فاقد الأمل</h3>
+              <p class="portfolio-summary" data-i18n="portfolio.p2.desc">
+                حملة سرد قصصي ملهمة خاطبت مخاوف العملاء الواقعية وحولتها إلى دافع شراء مؤكد وقوة جذب تسويقية ضخمة.
+              </p>
+              <button type="button" class="portfolio-action-link" data-i18n="portfolio.p2.link">
+                شاهد الفيديو الآن &larr;
+              </button>
+            </div>
+          </article>
+
+          <!-- مشروع 3: هوية "قطاف Qitaf" -->
+          <article class="glass-card portfolio-card tilt-box" 
+                   data-video-format="landscape"
+                   data-video-src="/ElephantsDream.mp4" 
+                   data-video-title="مشروع الهوية: من فكرة إلى هوية - قطاف">
+            <div class="portfolio-media">
+              <video class="portfolio-media-item" poster="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80" autoplay muted loop playsinline>
+                <source src="/ElephantsDream.mp4" type="video/mp4" />
+              </video>
+
+              <button type="button" class="play-trigger-btn" aria-label="تشغيل الفيديو">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </button>
+
+              <div class="media-badge" data-i18n="portfolio.p3.badge">هوية تجارية</div>
+            </div>
+            <div class="portfolio-details">
+              <span class="portfolio-category" data-i18n="portfolio.p3.cat">هوية بصرية متكاملة</span>
+              <h3 class="portfolio-name" data-i18n="portfolio.p3.title">مشروع الهوية: من فكرة إلى هوية - قطاف</h3>
+              <p class="portfolio-summary" data-i18n="portfolio.p3.desc">
+                رحلة تحويل فكرة تجارية طموحة إلى هوية خليجية أصيلة وفاخرة تبرز في سوق تنافسي شرس مع بناء دليل الهوية وتطبيقاتها.
+              </p>
+              <button type="button" class="portfolio-action-link" data-i18n="portfolio.p3.link">
+                شاهد استعراض الهوية &larr;
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. قسم الأداء والمبادئ التقنية -->
+    <section class="section-padding bg-alt" id="performance">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="collab-badge">
+            <span data-i18n="perf.brand1">براند جيت</span> 
+            <span class="cross-icon">✕</span> 
+            <span data-i18n="perf.brand2">تقنيات رعد للأداء الفائق</span>
+          </div>
+          <h2 class="section-title" data-i18n="perf.title">معمارية تقنية فائقة وأداء لا يقبل المساومة</h2>
+          <p class="section-subtitle" data-i18n="perf.subtitle">
+            تمت برمجة وتطوير هذه المنصة خصيصاً بمعايير هندسية متقدمة تحقق أقصى درجات السرعة والأمان والتجاوب.
+          </p>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="glass-card metric-card">
+            <div class="metric-icon">⚡</div>
+            <div class="metric-value-wrap">
+              <span class="counter-num" data-target="0.8">0</span><span class="metric-unit" data-i18n="perf.c1.unit">ثانية</span>
+            </div>
+            <h3 class="metric-title" data-i18n="perf.c1.title">سرعة تحميل خارقة (أقل من ثانية واحدة)</h3>
+            <p class="metric-desc" data-i18n="perf.c1.desc">تحميل فوري للصفحات والمحتوى لتحقيق أفضل تجربة تصفح وأعلى معدلات تحويل للعملاء.</p>
+          </div>
+
+          <div class="glass-card metric-card">
+            <div class="metric-icon">🛡️</div>
+            <div class="metric-value-wrap">
+              <span class="counter-num" data-target="100">0</span><span class="metric-unit">%</span>
+            </div>
+            <h3 class="metric-title" data-i18n="perf.c2.title">أمان متقدم وحماية تامة للبيانات</h3>
+            <p class="metric-desc" data-i18n="perf.c2.desc">طبقات حماية متطورة وتشفير كامل لكافة الاتصالات والبيانات الصادرة والواردة.</p>
+          </div>
+
+          <div class="glass-card metric-card">
+            <div class="metric-icon">💎</div>
+            <div class="metric-value-wrap">
+              <span class="counter-num" data-target="99.9">0</span><span class="metric-unit">%</span>
+            </div>
+            <h3 class="metric-title" data-i18n="perf.c3.title">كود برمجي نقي وقابل للتوسع اللامحدود</h3>
+            <p class="metric-desc" data-i18n="perf.c3.desc">هندسة برمجية نموذجية بدون شوائب أو مكتبات زائدة، تضمن مرونة تامة لاستيعاب مئات الآلاف من الزوار.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. قسم التواصل والفوتر -->
+    <section class="section-padding" id="contact">
+      <div class="container">
+        <div class="glass-card contact-main-card">
+          
+          <div class="contact-info-side">
+            <span class="section-tag" data-i18n="contact.tag">تواصل معنا</span>
+            <h2 class="contact-heading" data-i18n="contact.title">
+              انضم إلينا اليوم، فنحن نصنع الفارق دائماً.
+            </h2>
+            <p class="contact-lead" data-i18n="contact.desc">
+              تواصل مباشرة مع فريق قيادة الاستراتيجيات في دبي لمناقشة أهدافك وبدء العمل على مشروعك القادم.
+            </p>
+
+            <div class="contact-details-box">
+              <div class="detail-row">
+                <div class="d-icon">📍</div>
+                <div>
+                  <span class="d-label" data-i18n="contact.locLabel">المقر الرئيسي</span>
+                  <p class="d-val" data-i18n="contact.locVal">دبي - الإمارات العربية المتحدة</p>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <div class="d-icon">✉️</div>
+                <div>
+                  <span class="d-label" data-i18n="contact.emailLabel">البريد الإلكتروني</span>
+                  <p class="d-val">
+                    <a href="mailto:hello@brandgate.agency" class="hover-cyan">hello@brandgate.agency</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <div class="d-icon">📞</div>
+                <div>
+                  <span class="d-label" data-i18n="contact.phoneLabel">الهواتف والواتساب المباشر</span>
+                  <div class="phones-group" dir="ltr">
+                    <a href="https://wa.me/971502676684" target="_blank" rel="noopener noreferrer" class="hover-cyan">+971 50 267 6684</a>
+                    <a href="tel:+971567432208" class="hover-cyan">+971 56 743 2208</a>
+                   
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links-area">
+              <span class="social-heading" data-i18n="contact.socialLabel">تابعنا وتواصل معنا عبر:</span>
+              <div class="social-chips">
+                <a href="https://www.instagram.com/brandgate.agency/" target="_blank" rel="noopener noreferrer" class="social-chip" data-i18n="social.ig">إنستغرام</a>
+                <a href="https://www.tiktok.com/@brandgate.agency?lang=en" target="_blank" rel="noopener noreferrer" class="social-chip" data-i18n="social.tk">تيك توك</a>
+                <a href="https://www.linkedin.com/company/brandgate-uae" target="_blank" rel="noopener noreferrer" class="social-chip" data-i18n="social.li">لينكد إن</a>
+                <a href="https://www.facebook.com/Brandgate.UAE" target="_blank" rel="noopener noreferrer" class="social-chip" data-i18n="social.fb">فيسبوك</a>
+                <a href="https://www.threads.net/@brandgate.agency" target="_blank" rel="noopener noreferrer" class="social-chip" data-i18n="social.th">ثريدز</a>
+                <a href="https://wa.me/971502676684?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%D8%8C%20%D8%AA%D8%AD%D9%8A%D8%A9%20%D8%B7%D9%8A%D8%A8%D8%A9%20%D9%84%D9%81%D8%B1%D9%8A%D9%82%20%D8%A8%D8%B1%D8%A7%D9%86%D8%AF%20%D8%AC%D9%8A%D8%AA%D8%8C%20%D9%86%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%88%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%81%D8%B1%D8%B5%20%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%88%D9%86." target="_blank" rel="noopener noreferrer" class="social-chip" data-i18n="social.wa">واتساب</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- استمارة المراسلة السريعة -->
+          <div class="contact-form-side">
+            <form id="contactForm" class="glass-form-box">
+              <h3 class="form-title" data-i18n="contact.formTitle">ابدأ مشروعك الآن</h3>
+              <p class="form-sub" data-i18n="contact.formSubtitle">أرسل لنا متطلباتك وسنرد عليك خلال ساعات معدودة.</p>
+
+              <div class="form-group">
+                <label for="userName" data-i18n="contact.nameLabel">الاسم الكامل أو اسم الشركة *</label>
+                <input type="text" id="userName" required placeholder="" />
+              </div>
+
+              <div class="form-group">
+                <label for="userContact" data-i18n="contact.contactLabel">رقم الهاتف أو البريد الإلكتروني *</label>
+                <input type="text" id="userName" required placeholder="" />
+              </div>
+
+              <div class="form-group">
+                <label for="userService" data-i18n="contact.serviceLabel">الخدمة المطلوبة *</label>
+                <select id="userService">
+                  <option value="باقة النمو المتكامل" data-i18n="contact.optAll">باقة النمو المتكامل</option>
+                  <option value="استراتيجيات العلامات التجارية" data-i18n="contact.optStrat">استراتيجيات العلامات التجارية</option>
+                  <option value="صناعة الفيديوهات والريلز" data-i18n="contact.optReels">صناعة الفيديوهات والريلز</option>
+                  <option value="الإعلانات الممولة وجذب المبيعات" data-i18n="contact.optAds">الإعلانات الممولة وجذب المبيعات</option>
+                  <option value="تصميم وتطوير الهوية البصرية" data-i18n="contact.optBrand">تصميم وتطوير الهوية البصرية</option>
+                  <option value="إدارة وسائل التواصل الاجتماعي" data-i18n="contact.optSmm">إدارة وسائل التواصل الاجتماعي</option>
+                  <option value="تحسين وتصدر محركات البحث" data-i18n="contact.optSeo">تحسين وتصدر محركات البحث</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="userMsg" data-i18n="contact.msgLabel">تفاصيل مشروعك أو فكرتك</label>
+                <input type="text" id="userName" required placeholder="" />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-glow" id="formSubmitBtn">
+                <span data-i18n="contact.sendBtn">إرسال الرسالة عبر الواتساب فوراً</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- الفوتر -->
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <div class="footer-left">
+        <span class="footer-logo">Brand<span class="gradient-text">Gate</span></span>
+        <span class="footer-copy" data-i18n="footer.copy">© ٢٠٢٦ وكالة براند جيت. جميع الحقوق محفوظة. | دبي، الإمارات.</span>
+      </div>
+      <div class="footer-right">
+        <span class="ra3d-badge">
+          <span data-i18n="footer.creditPrefix">تم التصميم والبرمجة بمعمارية هندسية فائقة بواسطة </span><strong class="ra3d-name">Ra3d Tech</strong>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- الأزرار العائمة -->
+  <div class="floating-dock">
+    <a href="tel:+971502676684" class="float-btn call-action" title="اتصل بنا الآن">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </a>
+    <a href="https://wa.me/971502676684?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%D8%8C%20%D8%AA%D8%AD%D9%8A%D8%A9%20%D8%B7%D9%8A%D8%A8%D8%A9%20%D9%84%D9%81%D8%B1%D9%8A%D9%82%20%D8%A8%D8%B1%D8%A7%D9%86%D8%AF%20%D8%AC%D9%8A%D8%AA%D8%8C%20%D9%86%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%88%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%81%D8%B1%D8%B5%20%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%88%D9%86." target="_blank" rel="noopener noreferrer" class="float-btn wa-action" title="تواصل عبر الواتساب">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.5 0-2.97-.4-4.24-1.15l-.3-.18-3.15.83.84-3.07-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.69 8.23-8.23 8.23z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- النافذة السينمائية المنبثقة لمشاهدة الفيديو بالكامل -->
+  <div class="video-modal-backdrop" id="videoModal" aria-hidden="true" role="dialog">
+    <div class="video-modal-container" id="videoModalContainer">
+      <div class="video-modal-header">
+        <h4 id="videoModalTitle">مشاهدة العمل</h4>
+        <button type="button" class="close-modal-btn" id="closeModalBtn" aria-label="إغلاق النافذة">✕</button>
+      </div>
+      <div class="video-modal-player-wrap" id="playerWrap">
+        <video id="modalVideoPlayer" controls playsinline></video>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
